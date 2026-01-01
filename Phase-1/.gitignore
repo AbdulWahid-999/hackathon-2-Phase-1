@@ -1,0 +1,94 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+.env.test
+secrets.json
+config.json
+*.key
+*.pem
+*.crt
+*.cert
+*.secret
+
+# Logs
+*.log
+logs/
+log/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation
+docs/_build/
+
+# CI/CD
+.github/
+.circleci/
+.travis.yml
+
+# Backup files
+*~
+*.bak
+*.tmp
+
+# User-specific files that might contain sensitive data
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Local configuration files that might contain sensitive data
+config/
+credentials.json
+auth.json
+tokens.json
+
+# UV specific
+uv.lock
+.python-version

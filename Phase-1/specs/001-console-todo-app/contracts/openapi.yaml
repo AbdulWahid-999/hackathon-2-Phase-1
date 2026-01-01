@@ -1,0 +1,71 @@
+# Console Commands Specification
+
+## Overview
+This specification describes the console commands for the Todo Application. Since this is a console application, these are command-line interface interactions rather than HTTP APIs.
+
+## Commands
+
+### Add Todo Item
+- **Command**: `add "description of the task"`
+- **Description**: Adds a new todo item to the list
+- **Parameters**:
+  - description (string, required): The description of the task
+- **Success Response**: "Added task #X: description"
+- **Error Response**: "Error: Description cannot be empty"
+
+### List Todo Items
+- **Command**: `list`
+- **Description**: Displays all todo items
+- **Parameters**: None
+- **Success Response**: Formatted list of all todo items with their status
+- **Example Output**:
+```
+1. [ ] Buy groceries
+2. [x] Finish report
+3. [ ] Call dentist
+```
+
+### Update Todo Item
+- **Command**: `update <id> "new description"`
+- **Description**: Updates the description of an existing todo item
+- **Parameters**:
+  - id (integer, required): The ID of the todo item
+  - description (string, required): The new description
+- **Success Response**: "Updated task #X: new description"
+- **Error Response**: "Error: Task with ID X not found"
+
+### Delete Todo Item
+- **Command**: `delete <id>`
+- **Description**: Deletes a todo item from the list
+- **Parameters**:
+  - id (integer, required): The ID of the todo item
+- **Success Response**: "Deleted task #X"
+- **Error Response**: "Error: Task with ID X not found"
+
+### Mark Todo Complete
+- **Command**: `complete <id>`
+- **Description**: Marks a todo item as complete
+- **Parameters**:
+  - id (integer, required): The ID of the todo item
+- **Success Response**: "Marked task #X as complete"
+- **Error Response**: "Error: Task with ID X not found"
+
+### Mark Todo Incomplete
+- **Command**: `incomplete <id>`
+- **Description**: Marks a todo item as incomplete
+- **Parameters**:
+  - id (integer, required): The ID of the todo item
+- **Success Response**: "Marked task #X as incomplete"
+- **Error Response**: "Error: Task with ID X not found"
+
+### Help
+- **Command**: `help`
+- **Description**: Displays available commands
+- **Parameters**: None
+- **Success Response**: List of available commands with descriptions
+
+### Exit
+- **Command**: `exit` or `quit`
+- **Description**: Exits the application
+- **Parameters**: None
+- **Success Response**: Application terminates gracefully
